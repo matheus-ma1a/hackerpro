@@ -2,16 +2,11 @@ import './App.css'
 import styled from 'styled-components'
 import '@splidejs/react-splide/css';
 import ProgressBar from './RandomProgressBar';
-import { useEffect, useState } from 'react';
-import { BsTelegram } from 'react-icons/bs';
-import { SiCircuitverse } from "react-icons/si";
-import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import BannerSlide from './components/BannersSlider';
 import PixSlider from './components/PixSlider';
 import SectionSejMenbro from './SectionSejaMenbro';
-import modalBreve from './components/modalBreve';
 
 
 
@@ -56,7 +51,9 @@ const Section1 = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem 2rem;
+  gap: 0.1rem 1rem;
+  background-color: ${props => props.bgc};
+  padding: 1rem;
   
   a{
     
@@ -79,7 +76,7 @@ const Section1 = styled.div`
   
   @media (max-width: 667px) { 
       
-    margin: 0 1rem  ;  
+    margin: ${props => props.mg} 1rem  0 ;  
 
     a{
       width: 130px;
@@ -95,170 +92,225 @@ const Main = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 0 1rem;
+
+
+  .jogosDisponiveis{
+    margin: 3rem;
+  }
+
 `
+
+function gerarNumeroAleatorio(max, min) {
+
+  const numeroAleatorio = Math.random();
+  const numeroNoIntervalo = numeroAleatorio * (max - min) + min;
+  const numeroFinal = Math.floor(numeroNoIntervalo);
+
+  return numeroFinal;
+}
+
+const games = [
+  {
+    jogo: 'imgJogos/auto_roulettepb.webp',
+    pro: true,
+    porcentagem: gerarNumeroAleatorio(90, 98),
+    id: 1,
+    link: '#'
+  },
+  {
+    jogo: 'imgJogos/aviator.jpg',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(90, 98),
+    id: 2,
+    link: '/aviator',
+  },
+
+  {
+    jogo: 'imgJogos/fortunepb.webp',
+    pro: true,
+    porcentagem: gerarNumeroAleatorio(90, 98),
+    id: 3,
+    link: '#',
+  },
+
+  {
+    jogo: 'imgJogos/football_studiopb.jpg',
+    pro: true,
+    porcentagem: gerarNumeroAleatorio(90, 98),
+    id: 4,
+    link: '#',
+  },
+
+  {
+    jogo: 'imgJogos/penaltypb.jpg',
+    pro: true,
+    porcentagem: gerarNumeroAleatorio(90, 98),
+    id: 5,
+    link: '#',
+  },
+  ,
+  {
+    jogo: 'imgJogos/bacdo.jpg',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(90, 98),
+    id: 6,
+    link: '/bacbo',
+
+  },
+  {
+    jogo: 'imgJogos/ninja-crash.png',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(90, 98),
+    id: 7,
+    link: '/crash',
+
+  },
+  {
+    jogo: 'imgJogos/spacemanpb.jpg',
+    pro: true,
+    porcentagem: gerarNumeroAleatorio(90, 98),
+    id: 8,
+    link: '#',
+  },
+  {
+    jogo: 'imgJogos/mines.jpg',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(90, 98),
+    id: 9,
+    link: '/mines',
+
+  },
+  //--------------------------------------------
+  {
+    jogo: 'imgJogos/crash.jpg',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+  {
+    jogo: 'imgJogos/double.png',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+  {
+    jogo: 'imgJogos/dragon-tiger-luck.png',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+
+  {
+    jogo: 'imgJogos/fortune_dragon.png',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+  {
+    jogo: 'imgJogos/fortune-mouse.jpg',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '/Rato',
+
+  },
+  {
+    jogo: 'imgJogos/fortune-ox.jpg',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '/touro',
+
+  },
+  {
+    jogo: 'imgJogos/fortune-rabbit.jpg',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '/coelho',
+
+  },
+  {
+    jogo: 'imgJogos/magnify-man.png',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+  {
+    jogo: 'imgJogos/prosperityLion.png',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+  {
+    jogo: 'imgJogos/roelta-xxxtreme.png',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+
+  },
+  {
+    jogo: 'imgJogos/roleta-brasileira.png',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+  {
+    jogo: 'imgJogos/roleta-crazy-time.jpg',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+
+  {
+    jogo: 'imgJogos/sword.jpg',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+  },
+  {
+    jogo: 'imgJogos/thimbles.png',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+
+]
+
+
+
+const primeirosNoveObjetos = games.slice(0, 10);
+const restanteDoArray = games.slice(10, games.length)
+
+function handlePro (pro){
+  
+  window.scrollTo(0, 0)
+
+}
 
 function App() {
 
-  function gerarNumeroAleatorio(max, min) {
-
-    const numeroAleatorio = Math.random();
-    const numeroNoIntervalo = numeroAleatorio * (max - min) + min;
-    const numeroFinal = Math.floor(numeroNoIntervalo);
-
-    return numeroFinal;
-  }
-
-  const hendlemodal = ()=>{
-    return(
-      <modalBreve/>
-    )
-  }
-
-  const games = [
-    {
-      jogo: 'imgJogos/auto_roulettepb.webp',
-      porcentagem: gerarNumeroAleatorio(95, 98),
-      pro: true
-
-    },
-    {
-      jogo: 'imgJogos/aviatorpb.jpg',
-      porcentagem: gerarNumeroAleatorio(95, 98),
-      link: '/aviator',
-      pro: true
-    },
-    ,
-    {
-      jogo: 'imgJogos/bacdo.jpg',
-      porcentagem: gerarNumeroAleatorio(90, 70),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/crash.jpg',
-      porcentagem: gerarNumeroAleatorio(90, 70),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/double.png',
-      porcentagem: gerarNumeroAleatorio(30, 20),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/dragon-tiger-luck.png',
-      porcentagem: gerarNumeroAleatorio(90, 70),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/football_studio.jpg',
-      porcentagem: gerarNumeroAleatorio(90, 70),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/fortune_dragon.png',
-      porcentagem: gerarNumeroAleatorio(54, 40),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/fortune-mouse.jpg',
-      porcentagem: gerarNumeroAleatorio(70, 60),
-      link: '/Rato',
-
-    },
-    {
-      jogo: 'imgJogos/fortune-ox.jpg',
-      porcentagem: gerarNumeroAleatorio(54, 40),
-      link: '/touro',
-
-    },
-    {
-      jogo: 'imgJogos/fortune-rabbit.jpg',
-      porcentagem: gerarNumeroAleatorio(70, 60),
-      link: '/coelho',
-
-    },
-    {
-      jogo: 'imgJogos/fortune.jpg',
-      porcentagem: gerarNumeroAleatorio(30, 20),
-      link: '/tiger',
-
-    },
-    {
-      jogo: 'imgJogos/magnify-man.png',
-      porcentagem: gerarNumeroAleatorio(70, 60),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/minespb.webp',
-      porcentagem: gerarNumeroAleatorio(54, 40),
-      link: '/mines',
-      pro: true
-
-    },
-    {
-      jogo: 'imgJogos/ninja-crash.png',
-      porcentagem: gerarNumeroAleatorio(70, 60),
-      link: '/crash',
-
-    },
-    {
-      jogo: 'imgJogos/penalty.jpg',
-      porcentagem: gerarNumeroAleatorio(54, 40),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/prosperityLion.png',
-      porcentagem: gerarNumeroAleatorio(54, 40),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/roelta-xxxtremepb.webp',
-      porcentagem: gerarNumeroAleatorio(70, 60),
-      link: '#',
-      pro: true
-
-    },
-    {
-      jogo: 'imgJogos/roleta-brasileirapb.webp',
-      porcentagem: gerarNumeroAleatorio(54, 40),
-      link: '#',
-      pro: true
-
-    },
-    {
-      jogo: 'imgJogos/roleta-crazy-time.jpg',
-      porcentagem: gerarNumeroAleatorio(70, 60),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/spaceman.jpg',
-      porcentagem: gerarNumeroAleatorio(54, 40),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/sword.jpg',
-      porcentagem: gerarNumeroAleatorio(70, 60),
-      link: '#',
-
-    },
-    {
-      jogo: 'imgJogos/thimbles.png',
-      porcentagem: gerarNumeroAleatorio(54, 40),
-      link: '#',
-
-    },
-
-  ]
 
   return (
     <Main>
@@ -271,33 +323,58 @@ function App() {
 
       <SectionSejMenbro />
 
-      <p className='jogosDisponiveis' >Jogos Disponiveis</p>
+      <p className='jogosDisponiveis' >JOGOS COM A MAIOR ASSERTIVIDADE DO HACKERPRO
+        JOGOS COM MAIS PADRÕES IDENTIFICADOS
+      </p>
 
-      <Section1>
+      <Section1 key={999} bgc={'#ffffff18'} mg={'3rem'}>
         {
 
-          games.map((games, index) => {
-            
+          primeirosNoveObjetos.map((element, index) => {
+
             return (
-              
-              <Link to={games.pro ? '#' : games.link}>
-                <a href='https://boombets.com/affiliates/?btag=1660769_l292958' key={index} >
-                  <img src={games.jogo} alt="" />
-                  <ProgressBar progress={games.porcentagem} />
-                </a>
+
+              <Link key={index} onClick={element.pro === true ? handlePro : ''} to={element.pro === true ? '': element.link}>
+                <div>
+                  <img src={element.jogo} alt="" />
+                  <ProgressBar progress={element.porcentagem} />
+                </div>
+              </Link>
+
+            )
+          })}
+      </Section1>
+
+      <p className='jogosDisponiveis' >JOGOS COM A MAIOR ASSERTIVIDADE DO HACKERPRO
+        JOGOS COM MAIS PADRÕES IDENTIFICADOS
+      </p>
+
+
+      <Section1 key={8909} mg={'0rem'} >
+        {
+
+          restanteDoArray.map((element, index) => {
+
+            return (
+
+              <Link key={index + 10} to={element.pro ? '#' : element.link}>
+                <div>
+                  <img src={element.jogo} alt="" />
+                  <ProgressBar progress={element.porcentagem} />
+                </div>
               </Link>
             )
           })}
       </Section1>
 
-      <FooterS >
+
+      {/* <FooterS >
         <li>
           <RiMoneyDollarCircleFill style={{ fontSize: '2rem' }} />
-
           Minutos
         </li>
 
-      </FooterS>
+      </FooterS> */}
 
     </Main>
   )

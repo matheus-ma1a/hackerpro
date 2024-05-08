@@ -87,6 +87,9 @@ const ButtonS = styled.button`
 `
 
 function Crash() {
+
+  window.scrollTo(0, 0)
+
   const [sinal, setSinal] = useState(true)
   const [textControl, setTextControl] = useState(true)
 

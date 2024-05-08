@@ -101,6 +101,7 @@ function Crash() {
         console.log('funcionei');
     }
 
+    window.scrollTo(0, 0)
 
     function horaMinutos(tempo) {
         const expiryTime = 1; // tempo de expiração em minutos

@@ -16,6 +16,7 @@ const DivBotao = styled.div`
 
   position: fixed;
   bottom: 0px;
+  z-index: 1;
 
   `
 

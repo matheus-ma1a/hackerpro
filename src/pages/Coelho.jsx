@@ -62,6 +62,8 @@ const Div = styled.div`
 
 function Tiger() {
 
+  window.scrollTo(0, 0)
+
   const [mostrarConteudo, setMostrarConteudo] = useState(false);
   const [contador, setContador] = useState(true);
 

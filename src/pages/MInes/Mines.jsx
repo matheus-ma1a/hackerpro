@@ -5,6 +5,7 @@ import MinesPreload from "./MinerPreload/MinesPreload";
 import styled from "styled-components";
 import Iframe from "../../components/Iframe";
 import Timer from '../Timer'
+import Botaohome from "../../botaohome";
 
 
 
@@ -70,11 +71,13 @@ function Mines() {
 
   useEffect(() => {
     document.title = 'MI-Mines';
+    window.scrollTo(0, 0)
   })
 
 
   return (
     <div className="content">
+      <Botaohome />
       <div className="wrapper">
         <div className="main-Mines">
 
