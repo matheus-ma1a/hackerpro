@@ -29,7 +29,7 @@ function SectionSejMenbro() {
             width: 100%;
         }
 
-        button{
+        a{
             border: 0px;
             cursor: pointer;
             text-decoration: none;
@@ -40,11 +40,12 @@ function SectionSejMenbro() {
             border-radius: 4px;
             padding: 0.6rem 1.5rem;
             color: white;
-            background-color: rgb(16, 205, 0);
+            background-color: #4f08d3;
+            text-align: center;
         }
 
         h3{
-            color: rgb(16, 205, 0);
+            color: #4f08d3;
         }
         
         @media (max-width: 667px) {
@@ -63,9 +64,9 @@ function SectionSejMenbro() {
     return (
         <Section id="vip">
             <h3>SEJA UM MEMBRO VIP</h3>
-            <p>VOCÊ TERÁ ACESSO ÀS ATUALIZAÇÕES PRIMEIRO DO QUE OS OUTROS USUÁRIOS, QUALQUER TROCA DE PLATAFORMA, JOGOS NOVOS QUE SURGIREM, TODAS AS ATUALIZAÇÕES ESTARÃO DISPONÍVEIS UM MÊS ANTES PARA VOCÊ, SEMPRE QUEM CHEGA PRIMEIRO NOS JOGOS FATURA MUITO MAIS, E VOCÊ TERÁ ACESSO ÀS INFORMAÇÕES PRIMEIRO PARA LUCRAR MAIS.</p>
+            <p>VOCÊ TERÁ ACESSO ÀS ATUALIZAÇÕES E NOVOS JOGOS QUE SURGIREM PRIMEIRO QUE OS OUTROS USUÁRIOS. ALÉM DOS MELHORES JOGOS DO MOMENTO E COM A MAIOR ASSERTIVIDADE. TUDO ISSO LIBERADO PRA VOCÊ!</p>
             <div>
-                <button>ACESSO VIP</button>
+                <a href="" >ACESSO VIP</a>
             </div>
         </Section>
     );

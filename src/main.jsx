@@ -14,6 +14,7 @@ import Aviator from './pages/Aviaton.jsx'
 import Grupos from './Grupos.jsx'
 import Bacbo from './pages/bacbo.jsx'
 import Mines from './pages/MInes/Mines.jsx'
+import FortuneDragon from './pages/fortuneDragon.jsx'
 
 
 const router = createBrowserRouter([
@@ -58,9 +59,10 @@ const router = createBrowserRouter([
     element: <Bacbo />
   },
   {
-    path: '/Grupos',
-    element: <Grupos />
+    path: '/fortunedragon',
+    element: <FortuneDragon />
   },
+
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

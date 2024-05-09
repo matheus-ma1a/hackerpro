@@ -7,6 +7,7 @@ import Header from './components/Header';
 import BannerSlide from './components/BannersSlider';
 import PixSlider from './components/PixSlider';
 import SectionSejMenbro from './SectionSejaMenbro';
+import TagPro from './components/tagPro';
 
 
 
@@ -68,8 +69,11 @@ const Section1 = styled.div`
     img{
       border-radius: 8px;
       width: 100%;
-      height: 70%;
       
+    }
+
+    div{
+      position: relative;
     }
     
   }
@@ -111,26 +115,26 @@ function gerarNumeroAleatorio(max, min) {
 
 const games = [
   {
-    jogo: 'imgJogos/auto_roulettepb.webp',
+    jogo: 'imgJogos/auto_roulettepb.jpg',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 1,
     link: '#'
   },
   {
-    jogo: 'imgJogos/aviator.jpg',
-    pro: false,
+    jogo: 'imgJogos/aviatorpb.jpg',
+    pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 2,
     link: '/aviator',
   },
 
   {
-    jogo: 'imgJogos/fortunepb.webp',
+    jogo: 'imgJogos/fortunepb.jpg',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 3,
-    link: '#',
+    link: '/tiger',
   },
 
   {
@@ -150,16 +154,16 @@ const games = [
   },
   ,
   {
-    jogo: 'imgJogos/bacdo.jpg',
-    pro: false,
+    jogo: 'imgJogos/bacdopb.jpg',
+    pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 6,
     link: '/bacbo',
 
   },
   {
-    jogo: 'imgJogos/ninja-crash.png',
-    pro: false,
+    jogo: 'imgJogos/ninja-crashpb.png',
+    pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 7,
     link: '/crash',
@@ -173,47 +177,15 @@ const games = [
     link: '#',
   },
   {
-    jogo: 'imgJogos/mines.jpg',
-    pro: false,
+    jogo: 'imgJogos/minespb.jpg',
+    pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 9,
     link: '/mines',
 
   },
   //--------------------------------------------
-  {
-    jogo: 'imgJogos/crash.jpg',
-    pro: false,
-    porcentagem: gerarNumeroAleatorio(65, 76),
-    id: 1,
-    link: '#',
 
-  },
-  {
-    jogo: 'imgJogos/double.png',
-    pro: false,
-    porcentagem: gerarNumeroAleatorio(65, 76),
-    id: 1,
-    link: '#',
-
-  },
-  {
-    jogo: 'imgJogos/dragon-tiger-luck.png',
-    pro: false,
-    porcentagem: gerarNumeroAleatorio(65, 76),
-    id: 1,
-    link: '#',
-
-  },
-
-  {
-    jogo: 'imgJogos/fortune_dragon.png',
-    pro: false,
-    porcentagem: gerarNumeroAleatorio(65, 76),
-    id: 1,
-    link: '#',
-
-  },
   {
     jogo: 'imgJogos/fortune-mouse.jpg',
     pro: false,
@@ -239,41 +211,33 @@ const games = [
 
   },
   {
-    jogo: 'imgJogos/magnify-man.png',
+    jogo: 'imgJogos/fortune_dragon.png',
     pro: false,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '/fortunedragon',
+
+  },
+
+  {
+    jogo: 'imgJogos/dragon-tiger-luckpb.jpg',
+    pro: true,
     porcentagem: gerarNumeroAleatorio(65, 76),
     id: 1,
     link: '#',
 
   },
   {
-    jogo: 'imgJogos/prosperityLion.png',
-    pro: false,
+    jogo: 'imgJogos/crashpb.jpg',
+    pro: true,
     porcentagem: gerarNumeroAleatorio(65, 76),
     id: 1,
     link: '#',
 
   },
   {
-    jogo: 'imgJogos/roelta-xxxtreme.png',
-    pro: false,
-    porcentagem: gerarNumeroAleatorio(65, 76),
-    id: 1,
-    link: '#',
-
-
-  },
-  {
-    jogo: 'imgJogos/roleta-brasileira.png',
-    pro: false,
-    porcentagem: gerarNumeroAleatorio(65, 76),
-    id: 1,
-    link: '#',
-
-  },
-  {
-    jogo: 'imgJogos/roleta-crazy-time.jpg',
-    pro: false,
+    jogo: 'imgJogos/doublepb.png',
+    pro: true,
     porcentagem: gerarNumeroAleatorio(65, 76),
     id: 1,
     link: '#',
@@ -281,15 +245,57 @@ const games = [
   },
 
   {
-    jogo: 'imgJogos/sword.jpg',
-    pro: false,
+    jogo: 'imgJogos/magnify-manpb.png',
+    pro: true,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+  {
+    jogo: 'imgJogos/prosperityLionpb.png',
+    pro: true,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+  {
+    jogo: 'imgJogos/roelta-xxxtremepb.png',
+    pro: true,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+
+  },
+  {
+    jogo: 'imgJogos/roleta-brasileirapb.png',
+    pro: true,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+  {
+    jogo: 'imgJogos/roleta-crazy-timepb.jpg',
+    pro: true,
+    porcentagem: gerarNumeroAleatorio(65, 76),
+    id: 1,
+    link: '#',
+
+  },
+
+  {
+    jogo: 'imgJogos/swordpb.jpg',
+    pro: true,
     porcentagem: gerarNumeroAleatorio(65, 76),
     id: 1,
     link: '#',
   },
   {
-    jogo: 'imgJogos/thimbles.png',
-    pro: false,
+    jogo: 'imgJogos/thimblespb.png',
+    pro: true,
     porcentagem: gerarNumeroAleatorio(65, 76),
     id: 1,
     link: '#',
@@ -298,13 +304,11 @@ const games = [
 
 ]
 
-
-
 const primeirosNoveObjetos = games.slice(0, 10);
 const restanteDoArray = games.slice(10, games.length)
 
-function handlePro (pro){
-  
+function handlePro(pro) {
+
   window.scrollTo(0, 0)
 
 }
@@ -323,8 +327,10 @@ function App() {
 
       <SectionSejMenbro />
 
-      <p className='jogosDisponiveis' >JOGOS COM A MAIOR ASSERTIVIDADE DO HACKERPRO
-        JOGOS COM MAIS PADRÕES IDENTIFICADOS
+      <p className='jogosDisponiveis' >1º JOGOS COM A MAIOR ASSERTIVIDADE
+
+        JOGOS DO VIP
+
       </p>
 
       <Section1 key={999} bgc={'#ffffff18'} mg={'3rem'}>
@@ -334,8 +340,9 @@ function App() {
 
             return (
 
-              <Link key={index} onClick={element.pro === true ? handlePro : ''} to={element.pro === true ? '': element.link}>
+              <Link key={index} onClick={element.pro === true ? handlePro : ''} to={element.pro === true ? '' : element.link}>
                 <div>
+                  <TagPro  props={'VIP'} bgc={'#4f08d3'}/>
                   <img src={element.jogo} alt="" />
                   <ProgressBar progress={element.porcentagem} />
                 </div>
@@ -345,8 +352,9 @@ function App() {
           })}
       </Section1>
 
-      <p className='jogosDisponiveis' >JOGOS COM A MAIOR ASSERTIVIDADE DO HACKERPRO
-        JOGOS COM MAIS PADRÕES IDENTIFICADOS
+      <p className='jogosDisponiveis' >2º JOGOS COM MAIS PADRÕES IDENTIFICADOS
+
+        JOGOS COM MENOR ASSERTIVIDADE
       </p>
 
 
@@ -357,8 +365,9 @@ function App() {
 
             return (
 
-              <Link key={index + 10} to={element.pro ? '#' : element.link}>
+              <Link key={index + 10} onClick={element.pro === true ? handlePro : ''} to={element.pro ? '#' : element.link}>
                 <div>
+                  {element.pro === true ? <TagPro bgc={'#0848d3'} props={'EM BREVE'} /> : ''}
                   <img src={element.jogo} alt="" />
                   <ProgressBar progress={element.porcentagem} />
                 </div>
