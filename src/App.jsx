@@ -318,9 +318,7 @@ function App() {
 
   return (
     <Main>
-      <Link to={'/inteligencia'} >
-        <Header />
-      </Link>
+      <Header />
 
       <PixSlider />
 
