@@ -1,0 +1,56 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/"
+          },
+          {
+            "src": "/inteligencia",
+            "dest": "/"
+          },
+          {
+            "src": "/mines",
+            "dest": "/"
+          },
+          {
+            "src": "/Spaceman",
+            "dest": "/"
+          },
+          {
+            "src": "/Footballstudio",
+            "dest": "/"
+          },
+          {
+            "src": "/tiger",
+            "dest": "/"
+          },
+          {
+            "src": "/coelho",
+            "dest": "/"
+          },
+          {
+            "src": "/touro",
+            "dest": "/"
+          },
+          {
+            "src": "/rato",
+            "dest": "/"
+          },
+          {
+            "src": "/crash",
+            "dest": "/"
+          },
+          {
+            "src": "/aviator",
+            "dest": "/"
+          },
+          {
+            "src": "/bacbo",
+            "dest": "/"
+          },
+          {
+            "src": "/fortunedragon",
+            "dest": "/"
+          }
+    ]
+}

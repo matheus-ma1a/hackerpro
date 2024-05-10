@@ -318,8 +318,9 @@ function App() {
 
   return (
     <Main>
-
-      <Header />
+      <Link to={'/inteligencia'} >
+        <Header />
+      </Link>
 
       <PixSlider />
 
@@ -342,7 +343,7 @@ function App() {
 
               <Link key={index} onClick={element.pro === true ? handlePro : ''} to={element.pro === true ? '' : element.link}>
                 <div>
-                  <TagPro  props={'VIP'} bgc={'#4f08d3'}/>
+                  <TagPro props={'VIP'} bgc={'#4f08d3'} />
                   <img src={element.jogo} alt="" />
                   <ProgressBar progress={element.porcentagem} />
                 </div>
