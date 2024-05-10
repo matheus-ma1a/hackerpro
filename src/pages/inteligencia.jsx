@@ -108,7 +108,7 @@ function Inteligencia() {
         </li>
         <li>
           <Link to="/bacbo" className="list-stile" >
-            <img src="public\imgJogos\bacdo.jpg" alt="" />
+            <img src="/imgJogos/bacdo.jpg" alt="" />
           </Link>
         </li>
         <li>
