@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Botaohome from "../botaohome";
+import Botaohome from "../components/botaohome";
 import { useState } from 'react';
 import Timer from './Timer'
 import Iframe from "../components/Iframe";

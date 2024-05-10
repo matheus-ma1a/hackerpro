@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import Timer from './Timer'
 import Iframe from "../components/Iframe";
-import Botaohome from "../botaohome";
+import Botaohome from "../components/botaohome";
 
 const CrashS = styled.div`
   display: flex;

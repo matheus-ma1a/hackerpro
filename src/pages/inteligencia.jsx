@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import Botaohome from "./botaohome";
+import Botaohome from "../components/botaohome";
 import styled from "styled-components";
-import ProgressBar from './RandomProgressBar';
-import Header from "./components/Header";
-import BannerSlide from "./components/BannersSlider";
-import PixSlider from "./components/PixSlider";
+import ProgressBar from "../components/botaohome";
+import Header from "../components/Header";
+import BannerSlide from "../components/BannersSlider";
+import PixSlider from "../components/PixSlider";
 
 
 const MainInteligencia = styled.div`
@@ -95,7 +95,7 @@ function Inteligencia() {
       <BannerSlide />
 
       <Acertividade>
-        <p>Taxa de Assertividade</p>
+        <p>Bem vindo ao VIP</p>
         <ProgressBar progress={gerarNumeroAleatorio(99, 95)} />
       </Acertividade>
 
@@ -103,22 +103,22 @@ function Inteligencia() {
       <UlGroup>
         <li>
           <Link to="/tiger" className="list-stile" >
-            <img src="/imgJogos/tiger.webp" alt="" />
+            <img src="imgJogos/fortune.jpg" alt="" />
           </Link>
         </li>
         <li>
-          <Link to="/coelho" className="list-stile" >
-            <img src="imgJogos/rabbit.webp" alt="" />
+          <Link to="/bacbo" className="list-stile" >
+            <img src="public\imgJogos\bacdo.jpg" alt="" />
           </Link>
         </li>
         <li>
-          <Link to="/Rato" className="list-stile" >
-            <img src="imgJogos/rato.webp" alt="" />
+          <Link to="/mines" className="list-stile" >
+            <img src="imgJogos/mines.jpg" alt="" />
           </Link>
         </li>
         <li>
-          <Link to="/touro" className="list-stile" >
-            <img src="imgJogos/touro.webp" alt="" />
+          <Link to="/Spaceman" className="list-stile" >
+            <img src="imgJogos\spaceman.jpg" alt="" />
           </Link>
         </li>
         <li>
@@ -128,7 +128,12 @@ function Inteligencia() {
         </li>
         <li>
           <Link to="/aviator" className="list-stile" >
-            <img src="/Aviator.webp" alt="" />
+            <img src="imgJogos\aviator.jpg" alt="" />
+          </Link>
+        </li>
+        <li>
+          <Link to="/Footballstudio" className="list-stile" >
+            <img src="imgJogos\football_studio.jpg" alt="" />
           </Link>
         </li>
       </UlGroup>

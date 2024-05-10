@@ -1,12 +1,12 @@
 import './App.css'
 import styled from 'styled-components'
 import '@splidejs/react-splide/css';
-import ProgressBar from './RandomProgressBar';
+import ProgressBar from './components/RandomProgressBar';
 import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import BannerSlide from './components/BannersSlider';
 import PixSlider from './components/PixSlider';
-import SectionSejMenbro from './SectionSejaMenbro';
+import SectionSejMenbro from './components/SectionSejaMenbro';
 import TagPro from './components/tagPro';
 
 

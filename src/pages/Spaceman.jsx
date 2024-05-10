@@ -86,10 +86,7 @@ const ButtonS = styled.button`
   font-size: 1rem;
 `
 
-function Crash() {
-
-  window.scrollTo(0, 0)
-
+function Spaceman() {
   const [sinal, setSinal] = useState(true)
   const [textControl, setTextControl] = useState(true)
 
@@ -104,12 +101,7 @@ function Crash() {
     console.log('funcionei');
   }
 
-  function gerarNumeroEntre9701e9999() {
-    const min = 97.01;
-    const max = 99.99;
-    const numero = Math.random() * (max - min) + min;
-    return numero.toFixed(2); // Arredonda para duas casas decimais
-  }
+  window.scrollTo(0, 0)
 
   function horaMinutos(tempo) {
     const expiryTime = 1; // tempo de expiração em minutos
@@ -131,13 +123,23 @@ function Crash() {
     return numeroFinal;
   }
 
+  function numeroAleatorio() {
+    var random = Math.random();
+  
+    var numeroNoIntervalo = 1.10 + random * (2.10 - 1.10);
+  
+    return numeroNoIntervalo.toFixed(2);
+  }
+  
+  
+
   return (
     <>
       <Botaohome />
       <CrashS>
         <div className="interna" >
-          <img src="/crash.webp" alt="" />
-          Crash
+          <img src="imgJogos\spaceman.jpg" alt="" />
+          Spaceman
         </div>
         <DivMain>
 
@@ -148,25 +150,24 @@ function Crash() {
           <Resultado>
 
             <div>
-              <p>Cortes</p>
+              <p>Jogadas</p>
               <span>{
                 sinal ? '--'
                   :
                   <>
-                    <p>{gerarNumeroAleatorio(13, 3)}%</p>
-                    <p>🍬🍩🧁🍫</p>
+                    <p>{gerarNumeroAleatorio(13, 3)}</p>
                   </>}
               </span>
             </div>
 
             <div>
-              <p>Ganho</p>
+              <p>Saída</p>
               <span>
                 {
                   sinal ? '--'
                     :
                     <>
-                      {gerarNumeroEntre9701e9999()}%
+                      {numeroAleatorio()}X
                     </>
                 }
               </span>
@@ -179,8 +180,6 @@ function Crash() {
                   sinal ? '--'
                     :
                     <>
-                      <p>{horaMinutos(0)} Ás</p>
-
                       <p>{horaMinutos(3)}</p>
                     </>
                 }
@@ -196,10 +195,10 @@ function Crash() {
 
           </ButtonS>
         </DivMain>
-        <Iframe link={'https://turbopix.bet/?r=vtbkydlj'} />
+        <Iframe/>
       </CrashS>
     </>
   );
 }
 
-export default Crash;
+export default Spaceman;

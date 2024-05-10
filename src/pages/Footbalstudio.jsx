@@ -86,7 +86,7 @@ const ButtonS = styled.button`
   font-size: 1rem;
 `
 
-function Crash() {
+function Footbalstudio() {
     const [sinal, setSinal] = useState(true)
     const [textControl, setTextControl] = useState(true)
 
@@ -149,8 +149,8 @@ function Crash() {
             <Botaohome />
             <CrashS>
                 <div className="interna" >
-                    <img src="/imgJogos/bacdo.jpg" alt="" />
-                    Bac Bo
+                    <img src="/imgJogos/football_studio.jpg" alt="" />
+                    football Studio
                 </div>
                 <DivMain>
 
@@ -212,4 +212,4 @@ function Crash() {
     );
 }
 
-export default Crash;
+export default Footbalstudio;

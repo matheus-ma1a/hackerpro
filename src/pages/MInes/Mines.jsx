@@ -5,7 +5,7 @@ import MinesPreload from "./MinerPreload/MinesPreload";
 import styled from "styled-components";
 import Iframe from "../../components/Iframe";
 import Timer from '../Timer'
-import Botaohome from "../../botaohome";
+import Botaohome from "../../components/botaohome";
 
 
 
