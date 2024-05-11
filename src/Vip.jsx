@@ -116,14 +116,14 @@ function gerarNumeroAleatorio(max, min) {
 const games = [
   {
     jogo: 'imgJogos/auto_roulette.jpg',
-    pro: true,
+    pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 1,
     link: '#'
   },
   {
     jogo: 'imgJogos/aviator.jpg',
-    pro: true,
+    pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 2,
     link: '/aviator',
@@ -131,7 +131,7 @@ const games = [
 
   {
     jogo: 'imgJogos/fortune.jpg',
-    pro: true,
+    pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 3,
     link: '/tiger',
@@ -139,7 +139,7 @@ const games = [
 
   {
     jogo: 'imgJogos/football_studio.jpg',
-    pro: true,
+    pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 4,
     link: '#',
@@ -147,7 +147,7 @@ const games = [
 
   {
     jogo: 'imgJogos/penalty.jpg',
-    pro: true,
+    pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 5,
     link: '#',
@@ -155,7 +155,7 @@ const games = [
   ,
   {
     jogo: 'imgJogos/bacdo.jpg',
-    pro: true,
+    pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 6,
     link: '/bacbo',
@@ -163,7 +163,7 @@ const games = [
   },
   {
     jogo: 'imgJogos/ninja-crash.png',
-    pro: true,
+    pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 7,
     link: '/crash',
@@ -171,14 +171,14 @@ const games = [
   },
   {
     jogo: 'imgJogos/spaceman.jpg',
-    pro: true,
+    pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 8,
     link: '#',
   },
   {
     jogo: 'imgJogos/mines.jpg',
-    pro: true,
+    pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 9,
     link: '/mines',
