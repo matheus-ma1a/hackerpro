@@ -38,20 +38,27 @@ const InfoMines = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 
 
   li{
-    background-color: #252525;
-    width: 130px;
+    background-color: #3a3a3a;
     height: 60px;
     color: #ffffff;
+    /* background-color: #4e0000; */
     display: flex;
     border-radius: 5px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem 1rem;
   }
+
+  @media (max-width: 768px) {
+    li{
+    }
+}
+
 `
 
 const circulosEstrelas = [

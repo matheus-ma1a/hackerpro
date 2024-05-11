@@ -123,8 +123,6 @@
   align-items: center;
 }
 
-
-
 .carregamento-Mines{
   animation: is-rotating 1s infinite;
   border: 3px solid #ffffff;
@@ -151,6 +149,15 @@
 }
 
 img {
-  width: 50px;
+  width: 40px;
+}
+
+@media (max-width: 768px) {
+  .ifrmeWapper-Mines{
+    width: 100%;
+  }
+  .wpper-sinal-Mines{
+    width: 100%;
+  }
 }
 
