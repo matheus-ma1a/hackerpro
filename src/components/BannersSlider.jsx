@@ -2,7 +2,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 
 
-function BannerSlide() {
+function BannerSlide(props) {
   return (
     <>
       
@@ -20,7 +20,7 @@ function BannerSlide() {
 
       >
         <SplideSlide>
-          <img className='imgInsideSlide' src="./bn1.webp" alt="" />
+          <img className='imgInsideSlide' src={props.banner} alt="" />
         </SplideSlide>
       </Splide>
     </>

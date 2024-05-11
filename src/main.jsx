@@ -16,6 +16,7 @@ import Mines from './pages/MInes/Mines.jsx'
 import FortuneDragon from './pages/fortuneDragon.jsx'
 import Spaceman from './pages/Spaceman.jsx'
 import Footbalstudio from './pages/Footbalstudio.jsx'
+import Vip from './Vip.jsx'
 
 
 const router = createBrowserRouter([
@@ -24,9 +25,13 @@ const router = createBrowserRouter([
     element: <App />
   },
   {
-    path: '/inteligencia',
-    element: <Inteligencia />
+    path: '/vip',
+    element: <Vip />
   },
+  // {
+  //   path: '/inteligencia',
+  //   element: <Inteligencia />
+  // },
   {
     path: '/mines',
     element: <Mines />

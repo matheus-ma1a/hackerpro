@@ -66,7 +66,7 @@ function SectionSejMenbro() {
             <h3>SEJA UM MEMBRO VIP</h3>
             <p>VOCÊ TERÁ ACESSO ÀS ATUALIZAÇÕES E NOVOS JOGOS QUE SURGIREM PRIMEIRO QUE OS OUTROS USUÁRIOS. ALÉM DOS MELHORES JOGOS DO MOMENTO E COM A MAIOR ASSERTIVIDADE. TUDO ISSO LIBERADO PRA VOCÊ!</p>
             <div>
-                <a href="" >ACESSO VIP</a>
+                <a href="https://go.perfectpay.com.br/PPU38COF7RR" >ACESSO VIP</a>
             </div>
         </Section>
     );

@@ -52,7 +52,7 @@ const Section1 = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.1rem 1rem;
+  gap: 1rem 1rem;
   background-color: ${props => props.bgc};
   padding: 1rem;
   
@@ -115,14 +115,14 @@ function gerarNumeroAleatorio(max, min) {
 
 const games = [
   {
-    jogo: 'imgJogos/auto_roulettepb.jpg',
+    jogo: 'imgJogos/auto_roulette.jpg',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 1,
     link: '#'
   },
   {
-    jogo: 'imgJogos/aviatorpb.jpg',
+    jogo: 'imgJogos/aviator.jpg',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 2,
@@ -130,7 +130,7 @@ const games = [
   },
 
   {
-    jogo: 'imgJogos/fortunepb.jpg',
+    jogo: 'imgJogos/fortune.jpg',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 3,
@@ -138,7 +138,7 @@ const games = [
   },
 
   {
-    jogo: 'imgJogos/football_studiopb.jpg',
+    jogo: 'imgJogos/football_studio.jpg',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 4,
@@ -146,7 +146,7 @@ const games = [
   },
 
   {
-    jogo: 'imgJogos/penaltypb.jpg',
+    jogo: 'imgJogos/penalty.jpg',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 5,
@@ -154,7 +154,7 @@ const games = [
   },
   ,
   {
-    jogo: 'imgJogos/bacdopb.jpg',
+    jogo: 'imgJogos/bacdo.jpg',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 6,
@@ -162,7 +162,7 @@ const games = [
 
   },
   {
-    jogo: 'imgJogos/ninja-crashpb.png',
+    jogo: 'imgJogos/ninja-crash.png',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 7,
@@ -170,14 +170,14 @@ const games = [
 
   },
   {
-    jogo: 'imgJogos/spacemanpb.jpg',
+    jogo: 'imgJogos/spaceman.jpg',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 8,
     link: '#',
   },
   {
-    jogo: 'imgJogos/minespb.jpg',
+    jogo: 'imgJogos/mines.jpg',
     pro: true,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 9,
@@ -313,7 +313,7 @@ function handlePro(pro) {
 
 }
 
-function App() {
+function Vip() {
 
 
   return (
@@ -322,9 +322,7 @@ function App() {
 
       <PixSlider />
 
-      <BannerSlide banner={'./bn1.webp'} />
-
-      <SectionSejMenbro />
+      <BannerSlide banner={'banner2.png'} />
 
       <p className='jogosDisponiveis' >1º JOGOS COM A MAIOR ASSERTIVIDADE
 
@@ -332,7 +330,7 @@ function App() {
 
       </p>
 
-      <Section1 key={999} bgc={'#ffffff18'} mg={'3rem'}>
+      <Section1 key={999} bgc={'#7979790'} mg={'3rem'}>
         {
 
           primeirosNoveObjetos.map((element, index) => {
@@ -341,7 +339,6 @@ function App() {
 
               <Link key={index} onClick={element.pro === true ? handlePro : ''} to={element.pro === true ? '' : element.link}>
                 <div>
-                  <TagPro props={'VIP'} bgc={'#4f08d3'} />
                   <img src={element.jogo} alt="" />
                   <ProgressBar progress={element.porcentagem} />
                 </div>
@@ -376,16 +373,8 @@ function App() {
       </Section1>
 
 
-      {/* <FooterS >
-        <li>
-          <RiMoneyDollarCircleFill style={{ fontSize: '2rem' }} />
-          Minutos
-        </li>
-
-      </FooterS> */}
-
     </Main>
   )
 }
 
-export default App
+export default Vip
