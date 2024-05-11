@@ -114,13 +114,7 @@ function gerarNumeroAleatorio(max, min) {
 }
 
 const games = [
-  {
-    jogo: 'imgJogos/auto_roulette.jpg',
-    pro: false,
-    porcentagem: gerarNumeroAleatorio(90, 98),
-    id: 1,
-    link: '#'
-  },
+
   {
     jogo: 'imgJogos/aviator.jpg',
     pro: false,
@@ -183,6 +177,12 @@ const games = [
     id: 9,
     link: '/mines',
 
+  },  {
+    jogo: 'imgJogos/auto_roulette.jpg',
+    pro: false,
+    porcentagem: gerarNumeroAleatorio(90, 98),
+    id: 1,
+    link: '#'
   },
   //--------------------------------------------
 
