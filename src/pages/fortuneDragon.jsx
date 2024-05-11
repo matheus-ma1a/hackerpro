@@ -114,41 +114,13 @@ function fortuneDragon() {
 
     }
 
-    function emojiAleatorio() {
-        // Array contendo os emojis
-        const emojis = ["🔵", "🔴"];
-
-        // Gerando um número aleatório entre 0 e 1 para selecionar um emoji
-        const indiceAleatorio = Math.floor(Math.random() * emojis.length);
-
-        // Retornando o emoji correspondente ao índice aleatório
-        return emojis[indiceAleatorio];
-    }
-
-    function gerarNumeroAleatorio(max, min) {
-
-        const numeroAleatorio = Math.random();
-        const numeroNoIntervalo = numeroAleatorio * (max - min) + min;
-        const numeroFinal = Math.floor(numeroNoIntervalo);
-
-        return numeroFinal;
-    }
-
-    function numeroAleatorio() {
-        var random = Math.random();
-
-        var numeroNoIntervalo = 1.10 + random * (2.10 - 1.10);
-
-        return numeroNoIntervalo.toFixed(2);
-    }
-
     const RandNum = () => {
         return Math.floor(Math.random() * (10 - 3 + 1)) + 3
     }
 
     return (
         <>
-            <Botaohome />
+            <Botaohome home={'/'}/>
             <CrashS>
                 <div className="interna" >
                     <img src="/imgJogos/fortune_dragon.png" alt="" />

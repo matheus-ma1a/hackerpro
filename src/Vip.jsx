@@ -144,7 +144,7 @@ const games = [
     pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 5,
-    link: '#',
+    link: '/Penalty',
   },
   ,
   {
@@ -168,7 +168,7 @@ const games = [
     pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 8,
-    link: '#',
+    link: '/Spaceman',
   },
   {
     jogo: 'imgJogos/mines.jpg',
@@ -182,7 +182,7 @@ const games = [
     pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 1,
-    link: '#'
+    link: '/autoroleta'
   },
   //--------------------------------------------
 

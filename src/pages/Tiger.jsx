@@ -1,93 +1,112 @@
+import { useState } from "react";
 import styled from "styled-components";
-import Botaohome from "../components/botaohome";
-import { useState, useEffect, useMemo } from 'react';
 import Timer from './Timer'
 import Iframe from "../components/Iframe";
+import Botaohome from "../components/botaohome";
 
-
-const Div = styled.div`
-  font-family: 'Potta One', cursive !important;
+const CrashS = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
-  background-image: url('/fundo.webp');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 520px;
-  gap: 3rem;
+  padding-top: 2rem;
 
-
-  img{
-    width: 500px;
-  }
-
-  button{
-    display: flex;
-    gap: 1rem;
-    font-family: 'Potta One', cursive !important;
-    padding: 20px 50px;
-    border-radius: 8px;
-    border: none;
-    background-color: #e6252f;
-    color: #fcac56;
-    font-size: 20px;
-    padding: 15px 30px;
-    border-radius: 10px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    &:hover{
-      transform: scale(0.9);
-    }
-  }
-
-  div{
+  .interna{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    font-size: 1.3rem
-    
-  }
-  p{
-    /* font-family: 'Potta One', cursive !important; */
-    color: black ;
-    font-weight: 700;
+
+    img{
+      width: 130px;
+      border-radius: 5px;
+      margin-bottom: 2rem;
+    }
 
   }
 
 `
 
+const DivMain = styled.div`
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #101213;
+  width: max-content;
+  padding: 1rem 3rem;
+  gap: 1rem;
+  border-radius: 5px;
+  margin-top: 2rem;
 
-function Tiger() {
+  h1{
+    display: flex;
+    flex-direction: column;
+  }
+  
+`
+
+const Enunciado = styled.div`
+  background-color: #212425;
+  padding: 1rem 7rem;
+  border-radius: 5px;
+  
+`
+
+const Resultado = styled.div`
+  
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  
+  div{
+    
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #212425;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+`
+
+const ButtonS = styled.button`
+  border: none;
+  background: #1e66b8;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+`
+
+function Crash() {
+  const [sinal, setSinal] = useState(true)
+  const [textControl, setTextControl] = useState(true)
+
+  const handleButton = () => {
+    setSinal(false)
+    setTextControl(false)
+  }
+
+  const constrolaSinal = () => {
+    setTextControl(true)
+    setSinal(true)
+    console.log('funcionei');
+  }
 
   window.scrollTo(0, 0)
 
-  const [mostrarConteudo, setMostrarConteudo] = useState(false);
-  const [contador, setContador] = useState(true);
-
-  const iniciarContador = () => {
-
-    setMostrarConteudo(true);
-    setContador(false);
-    
-  };
-  
-  const terminaSinal = () => {
-    setContador(true);
-    setMostrarConteudo(false)
-
-  }
-
-  const RandNum = () => {
-    return Math.floor(Math.random() * (10 - 3 + 1)) + 3
-  }
-
-  function horaMinutos() {
+  function horaMinutos(tempo) {
     const expiryTime = 1; // tempo de expiração em minutos
     const now = new Date();
-    const expiry = new Date(now.getTime() + expiryTime * 60 * 1000);
+    const expiry = new Date(now.getTime() + tempo * 60 * 1000);
     const hours = String(expiry.getHours()).padStart(2, '0');
     const minutes = String(expiry.getMinutes()).padStart(2, '0');
 
@@ -95,36 +114,76 @@ function Tiger() {
 
   }
 
+  const RandNum = () => {
+    return Math.floor(Math.random() * (10 - 3 + 1)) + 3
+  }
+
   return (
     <>
-      <Botaohome />
-      <Div>
+      <Botaohome home={'/vip'}/>
+      <CrashS>
+        <div className="interna" >
+          <img src="imgJogos\fortune.jpg" alt="" />
+          Fortune Tiger
+        </div>
+        <DivMain>
 
-        <button onClick={iniciarContador}>
-          {contador ? 'Identificar sinal' : `Aguarde`}
-          <p>{contador ? '' : <Timer tempo={60} setContador={setContador} terminaSinal={terminaSinal} />}</p>
-        </button>
-        {
-          mostrarConteudo ?
+          <Enunciado>
+            <p>{sinal ? 'Gere um sinal' : 'Sinal gerado'}</p>
+          </Enunciado>
+
+          <Resultado>
+
             <div>
-              <p>Entre em: {horaMinutos()}</p>
-              <p>{RandNum()}x Normal</p>
-              <p>{RandNum()}x Turbo</p>
+              <span>{
+                sinal ? '--'
+                  :
+                  <>
+                    <p>Normal</p>
+                    <p>{RandNum()}X</p>
+                  </>}
+              </span>
             </div>
 
+            <div>
+              <span>
+                {
+                  sinal ? '--'
+                    :
+                    <>
+                      <p>Turbo</p>
+                      {RandNum()}X
+                    </>
+                }
+              </span>
+            </div>
 
-            :
+            <div>
+              <p>Valido até</p>
+              <span>
+                {
+                  sinal ? '--'
+                    :
+                    <>
+                      <p>{horaMinutos(3)}</p>
+                    </>
+                }
+              </span>
+            </div>
 
-            ''
+          </Resultado>
 
-        }
-      </Div>
+          <ButtonS onClick={handleButton} disabled={sinal ? false : true} style={sinal ? { backgroundColor: '#1e66b8' } : { backgroundColor: '#b81e1e92' }} >
+            {
+              textControl ? 'Gerar Sinal' : <Timer tempo={120} setSinal={setSinal} constrolaSinal={constrolaSinal} />
+            }
 
-      <Iframe link={'https://turbopix.bet/?r=vtbkydlj'} />
+          </ButtonS>
+        </DivMain>
+        <Iframe />
+      </CrashS>
     </>
   );
 }
 
-
-
-export default Tiger;
+export default Crash;

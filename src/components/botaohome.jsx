@@ -33,10 +33,10 @@ const BtnHome = styled.button`
   display: flex;
 `
 
-function Botaohome() {
+function Botaohome(props) {
   return (
     <DivBotao>
-      <Link to="/" >
+      <Link to={props.home} >
         <BtnHome> <GoHomeFill /> </BtnHome>
       </Link>
     </DivBotao>

@@ -23,8 +23,7 @@ const CrashS = styled.div`
 
   }
 
-  `
-
+`
 const DivMain = styled.div`
   
   display: flex;
@@ -43,14 +42,14 @@ const DivMain = styled.div`
     flex-direction: column;
   }
   
-  `
+`
 
 const Enunciado = styled.div`
   background-color: #212425;
   padding: 1rem 7rem;
   border-radius: 5px;
   
-  `
+`
 
 const Resultado = styled.div`
   
@@ -114,59 +113,69 @@ function Crash() {
 
   }
 
-  function gerarNumeroAleatorio(max, min) {
 
-    const numeroAleatorio = Math.random();
-    const numeroNoIntervalo = numeroAleatorio * (max - min) + min;
-    const numeroFinal = Math.floor(numeroNoIntervalo);
-
-    return numeroFinal;
-  }
-
-  function numeroAleatorio() {
-    var random = Math.random();
   
-    var numeroNoIntervalo = 1.10 + random * (2.10 - 1.10);
-  
-    return numeroNoIntervalo.toFixed(2);
-  }
+  function randJogadas(){
+      
+      const opcoesDeAposta = [
+        "Número Único",
+        "Cor ⚫",
+        "Cor 🔴",
+        "Par",
+        "Par",
+        "Baixo",
+        "Baixo",
+        "Coluna",
+        "Dúzia",
+        "Linha",
+        "Quina"
+    ];
+    // Gerar um índice aleatório
+    const indiceAleatorio = Math.floor(Math.random() * opcoesDeAposta.length);
+    
+    // Acessar o elemento aleatório no array
+    const opcaoAleatoria = opcoesDeAposta[indiceAleatorio];
+
+
+    return opcaoAleatoria
+}
 
 
   return (
     <>
-      <Botaohome home={'/vip'} />
+      <Botaohome home={'/vip'}/>
       <CrashS>
         <div className="interna" >
-          <img src="/Aviator.webp" alt="" />
-          Aviator
+          <img src="imgJogos\auto_roulette.jpg" alt="" />
+          Auto Rolette
         </div>
         <DivMain>
 
           <Enunciado>
-            <p>{ sinal?  'Gere um sinal' : 'Sinal gerado'}</p>
+            <p>{sinal ? 'Gere um sinal' : 'Sinal gerado'}</p>
           </Enunciado>
 
           <Resultado>
 
             <div>
-              <p>Jogadas</p>
               <span>{
                 sinal ? '--'
                   :
                   <>
-                    <p>{gerarNumeroAleatorio(13, 3)}</p>
+                    <p>Normal</p>
+                    <p>{randJogadas()}</p>
                   </>}
               </span>
             </div>
 
             <div>
-              <p>Saída</p>
               <span>
                 {
                   sinal ? '--'
                     :
                     <>
-                      {numeroAleatorio()}X
+                      <p>Proteçoes</p>
+                      Ate 02 no 🟢
                     </>
                 }
               </span>
@@ -187,14 +196,14 @@ function Crash() {
 
           </Resultado>
 
-          <ButtonS onClick={handleButton} disabled={sinal ? false :true } style={sinal ? {backgroundColor: '#1e66b8'} : {backgroundColor: '#b81e1e92'} } >
+          <ButtonS onClick={handleButton} disabled={sinal ? false : true} style={sinal ? { backgroundColor: '#1e66b8' } : { backgroundColor: '#b81e1e92' }} >
             {
               textControl ? 'Gerar Sinal' : <Timer tempo={120} setSinal={setSinal} constrolaSinal={constrolaSinal} />
             }
 
           </ButtonS>
         </DivMain>
-        <Iframe/>
+        <Iframe />
       </CrashS>
     </>
   );

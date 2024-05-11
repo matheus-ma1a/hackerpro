@@ -125,28 +125,12 @@ function Crash() {
         return emojis[indiceAleatorio];
     }
 
-    function gerarNumeroAleatorio(max, min) {
-
-        const numeroAleatorio = Math.random();
-        const numeroNoIntervalo = numeroAleatorio * (max - min) + min;
-        const numeroFinal = Math.floor(numeroNoIntervalo);
-
-        return numeroFinal;
-    }
-
-    function numeroAleatorio() {
-        var random = Math.random();
-
-        var numeroNoIntervalo = 1.10 + random * (2.10 - 1.10);
-
-        return numeroNoIntervalo.toFixed(2);
-    }
 
 
 
     return (
         <>
-            <Botaohome />
+            <Botaohome home={'/vip'} />
             <CrashS>
                 <div className="interna" >
                     <img src="/imgJogos/bacdo.jpg" alt="" />

@@ -135,7 +135,7 @@ function Spaceman() {
 
   return (
     <>
-      <Botaohome />
+      <Botaohome home={'/vip'} />
       <CrashS>
         <div className="interna" >
           <img src="imgJogos\spaceman.jpg" alt="" />

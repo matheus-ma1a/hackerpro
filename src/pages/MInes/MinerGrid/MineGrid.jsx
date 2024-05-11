@@ -4,7 +4,7 @@ function MinerGrid(props) {
   // eslint-disable-next-line react/prop-types
   const sinal_embaralhado = sinal.map((Element, index) => {
     return (
-      <img key={index} src={Element} />
+      <img className="imgGrid" key={index} src={Element} />
     )
   })
 
