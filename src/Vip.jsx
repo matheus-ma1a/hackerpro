@@ -136,7 +136,7 @@ const games = [
     pro: false,
     porcentagem: gerarNumeroAleatorio(90, 98),
     id: 4,
-    link: '#',
+    link: '/Footballstudio',
   },
 
   {
