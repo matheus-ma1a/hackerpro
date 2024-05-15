@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaCircleUser } from "react-icons/fa6";
 import { LuBell } from "react-icons/lu";
+import { Link } from 'react-router-dom';
 
 
 
@@ -36,7 +37,9 @@ const HeadeS = styled.header`
 
   }
 
+
 `
+const style = { color: "white" }
 
 function Header() {
   return (
@@ -47,7 +50,9 @@ function Header() {
       </div>
       <div className='div2'>
         <LuBell />
-        <FaCircleUser />
+        <Link className='loginIcon' to={'/login'}>
+          <FaCircleUser style={style} />
+        </Link>
       </div>
     </HeadeS>
   );
