@@ -168,7 +168,7 @@ async function loginAction({ request }) {
 
 const appLoader = () => {
   if(!fakeAuthProvider.isAuthenticate){
-    return redirect('/login')
+    return redirect('/')
   }
   return null
 }
